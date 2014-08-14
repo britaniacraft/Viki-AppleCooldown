@@ -114,13 +114,6 @@ public class VikiAppleCooldown extends JavaPlugin implements Listener {
 	{
 		if(cmd.getName().equalsIgnoreCase("vkapplecooldown")) {
 			
-			Player player = null;
-			
-			if (sender instanceof Player)
-			{
-				player = (Player) sender;
-			}
-			
 			if (args.length < 1)
 			{
 				sender.sendMessage(ChatColor.RED+"Usage: /vkac [reload]");
@@ -132,9 +125,9 @@ public class VikiAppleCooldown extends JavaPlugin implements Listener {
 				 
 				if (sender instanceof Player)
 				{
-					if (!this.perm.has(player, "vikiapplecooldown.reload") && !player.isOp())
+					if (!this.perm.has(sender, "vikiapplecooldown.reload") && !sender.isOp())
 					{
-						player.sendMessage(ChatColor.RED+"You don't have permission to do this");
+						sender.sendMessage(ChatColor.RED+"You don't have permission to do this");
 						return true;
 					}
 				}
