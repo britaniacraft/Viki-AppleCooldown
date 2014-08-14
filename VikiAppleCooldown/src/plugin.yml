@@ -1,0 +1,9 @@
+name: VikiAppleCooldown
+main: com.gmail.falistos.VikiAppleCooldown.VikiAppleCooldown
+version: 0.1
+commands:
+   vkapplecooldown:
+      description: Viki-AppleCooldown
+      usage: /vkapplecooldown [reload]
+      aliases: [vkac]
+depend: [Vault]
